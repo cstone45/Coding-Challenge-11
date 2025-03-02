@@ -47,6 +47,20 @@ class Library { //Establishes the Class Library and its properties
     addBook(book) { //Creates the addBook method which adds books to the book Array
         this.books.push(book);
     }
+    lendBook(borrowerId, isbn) {
+        this.books.find();
+        this.borrowers.find();
+        if (books.find() = 0) {
+        return `Error; Book not found`
+        }
+        if (this.borrowers.find() = 0) {
+            return `Error, Borrower not Found`
+        }
+        else {
+            this.books -= copies;
+            this.borrowers.push()
+        }
+    }
     listBooks() { //Creates the listBooks method to list the information about the books
         this.books.forEach(book => console.log(book.getDetails()))
     }
@@ -54,3 +68,9 @@ class Library { //Establishes the Class Library and its properties
 const library = new Library(); //Establishes a new Library
 library.addBook(book1); //Adds the already existant book1 to the Books array
 library.listBooks(); //Lists the information about book1 within the Library class
+
+//Task 4: Implementing Book Borrowing
+//See above changes to Task 3
+library.lendBook(201, 123456);
+console.log(book1.getDetails());
+console.log(borrower1.borrowedBooks);
