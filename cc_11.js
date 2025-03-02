@@ -37,3 +37,20 @@ borrower1.borrowBook("The Great Gatsby"); //Logs The Great Gatsby to the Array
 console.log(borrower1.borrowedBooks); //Logs Borrower 1's checked out book to the console
 borrower1.returnBook("The Great Gatsby"); //Removes the checked out book from the Array
 console.log(borrower1.borrowedBooks); //Logs that the book is returned to the console
+
+//Task 3: Creating a Library Class
+class Library { //Establishes the Class Library and its properties
+    constructor() {
+        this.books = [];
+        this.borrowers = [];
+    }
+    addBook(book) { //Creates the addBook method which adds books to the book Array
+        this.books.push(book);
+    }
+    listBooks() { //Creates the listBooks method to list the information about the books
+        this.books.forEach(book => console.log(book.getDetails()))
+    }
+}
+const library = new Library(); //Establishes a new Library
+library.addBook(book1); //Adds the already existant book1 to the Books array
+library.listBooks(); //Lists the information about book1 within the Library class
