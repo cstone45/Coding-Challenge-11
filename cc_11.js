@@ -61,6 +61,10 @@ class Library { //Establishes the Class Library and its properties
             this.borrowers.push()
         }
     }
+    returnBook(borrowerId, isbn) {
+        this.books += copies;
+        this.borrowers.pop()
+    }
     listBooks() { //Creates the listBooks method to list the information about the books
         this.books.forEach(book => console.log(book.getDetails()))
     }
@@ -72,5 +76,11 @@ library.listBooks(); //Lists the information about book1 within the Library clas
 //Task 4: Implementing Book Borrowing
 //See above changes to Task 3
 library.lendBook(201, 123456);
+console.log(book1.getDetails());
+console.log(borrower1.borrowedBooks);
+
+//Task 5: Implementing Book Returns
+//See above changes to Task 3
+library.returnBook(201, 123456);
 console.log(book1.getDetails());
 console.log(borrower1.borrowedBooks);
