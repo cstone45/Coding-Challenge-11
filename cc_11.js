@@ -48,27 +48,33 @@ class Library { //Establishes the Class Library and its properties
         this.books.push(book);
     }
     lendBook(borrowerId, isbn) {
-        this.books.find();
-        this.borrowers.find();
-        if (books.find() = 0) {
-        return `Error; Book not found`
+        const book = this.books.find(b => b.isbn === isbn);
+        const borrower = this.borrowers.find(b => b.borrowerId === borrowerId);
+        if (!book) {
+        console.log(`Error; Book not found`)
         }
-        if (this.borrowers.find() = 0) {
-            return `Error, Borrower not Found`
+        else if (!borrower) {
+            console.log(`Error, Borrower not Found`)
         }
-        else {
-            this.books -= copies;
-            this.borrowers.push()
-        }
+        else if (book.copies > 0) {
+            book.copies -= 1;
+        borrower.borrowBook(book.title);
+        console.log(`"${book.title}" has been borrowed by ${this.borrower.name}`);
     }
-    returnBook(borrowerId, isbn) {
-        this.books += copies;
-        this.borrowers.pop()
-    }
-    listBooks() { //Creates the listBooks method to list the information about the books
-        this.books.forEach(book => console.log(book.getDetails()))
+    else {
+        console.log(`No Copies Avalible`);
     }
 }
+listBooks() {
+    this.books.forEach(book => console.log(book.getDetails()))
+}
+returnBook(borrowerId, isbn) {
+    if (book.copies > 0) {
+        book.copies += 1;
+    }
+    this.borrowedBooks.pop(book)
+}
+    }
 const library = new Library(); //Establishes a new Library
 library.addBook(book1); //Adds the already existant book1 to the Books array
 library.listBooks(); //Lists the information about book1 within the Library class
